@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>student</servlet-name>
+        <servlet-class>com.neuedu.web.StudentWeb</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>student</servlet-name>
+        <url-pattern>/all</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>add</servlet-name>
+        <servlet-class>com.neuedu.web.AddServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>add</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>doAdd</servlet-name>
+        <servlet-class>com.neuedu.web.doAddServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doAdd</servlet-name>
+        <url-pattern>/doAdd</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+    <servlet>
+        <servlet-name>abc</servlet-name>
+        <servlet-class>com.neuedu.test.TestWeb</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>abc</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>kj</servlet-name>
+        <servlet-class>com.neuedu.test.Test</servlet-class>
+        <load-on-startup>1</load-on-startup>
+        <!-- 整数  数值越小  优先级越高
+        0   也有优先级
+        如果是负数  相当于没写
+
+        -->
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>kj</servlet-name>
+        <url-pattern>/b</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>gd</servlet-name>
+        <servlet-class>com.neuedu.test.DoLogingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>gd</servlet-name>
+        <url-pattern>/dologin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>test</servlet-name>
+        <servlet-class>com.neuedu.test.Forwarding</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>test</servlet-name>
+        <url-pattern>/forwar</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
